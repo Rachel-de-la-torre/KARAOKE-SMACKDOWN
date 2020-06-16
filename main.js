@@ -1,17 +1,9 @@
-// function keyPressed() {
-//     if (keyCode == 32) {
-//       game.player.jump();
-//     }
-    
-//ABCD
-
 const game = new Game();
 const obstacle = new Obstacles();
-
+const targets = new Targets();
 
 function preload() {
     game.preloadGame();
-          
 }
 
 function setup() {
@@ -21,4 +13,20 @@ function setup() {
 
 function draw() {
     game.drawingGame();
+}
+
+
+function keyPressed() {
+    if (keyCode === 189) {
+        console.log("keyPressed")
+    }
+    else if (keyCode === 80) {
+        // obstacle.checkCollision.collideCherry();
+      }
+    else if (keyCode === 76) {
+        // obstacle.checkCollision.collideSeven();
+    }
+    else if (keyCode == 188) {
+        // obstacle.checkCollision.collideWatermelon();
+    }
 }

@@ -3,16 +3,11 @@ class Game {
         this.background = new Background();
         this.obstacles = [];
         this.width=1500
-        this.height=790
-        // this.obstacleImages = [
-        //     { src: loadImage("/assets/bell.png"), x: 0, height: 200},
-        //     { src: loadImage("/assets/cherry.png"), x: 0, height: 300},
-        //     { src: loadImage("/assets/seven.png"), x: 0, height: 400},
-        //     { src: loadImage("/assets/watermelon.png"), x: 0, height: 500}
-        //   ];
+        this.height=800
     }
 
     preloadGame() {
+        targets.preload();
         this.backgroundImgs = [
             {src: loadImage("/assets/background0.png")}
         ];
@@ -25,30 +20,24 @@ class Game {
     }
 
     drawingGame() {
-        console.log(this.obstacles);
-
         clear();
-        this.background.drawingBackground();
 
-         if(frameCount%60==0){
+        
+        this.background.drawingBackground();
+        // collision.drawingCollisionImg();
+
+         if(frameCount%180==0){
             let randomElem=this.obstacleImages[Math.floor(Math.random()*this.obstacleImages.length)];
             this.obstacles.push(new Obstacles(randomElem.height,randomElem.src));
+            // console.log(randomElem);
          }
           this.obstacles.forEach(elem=>{
              elem.drawingObstacles()
          }) 
 
-        // frameRate(20);
-       
+        targets.drawingTargetsImg();
 
-        // if (frameCount % 20 === 0) {
-        //     let randomNumber = random(0, height - 60);
-        //     this.obstacles.push(new Obstacles(randomNumber));
-        //   }
-        //   this.obstacles.forEach((elem) => {
-        //     elem.drawingObstacles();
-        //   });
-}
+    }
 }
 
 
