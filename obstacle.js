@@ -23,7 +23,7 @@ class Obstacles {
       //   then we check if the target lines up with obstacle's x value
     } else if (this.x < 300) {
       console.log("x cood in collide", this.x);
-      console.log("collides function");
+      // console.log("collides function");
       return true;
     }
   }

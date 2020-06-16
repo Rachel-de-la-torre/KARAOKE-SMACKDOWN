@@ -21,6 +21,7 @@ class Targets {
         image (this.imgCherry, 100, 250, 150, 150),
         image (this.imgSeven, 100, 400, 150, 150),
         image (this.imgWatermelon, 100, 550, 150, 150)
+        // console.log(this.imgCherry);
     }
 
     // checkCollision(collideBell) {
