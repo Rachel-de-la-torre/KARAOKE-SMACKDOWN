@@ -5,12 +5,13 @@ class Obstacles {
     this.x = game.width;
     this.y = randomY;
     this.img = img;
+    // this.speed = 0;
   }
 
   setup() {}
 
   drawingObstacles() {
-    this.x -= 10;
+    this.x -= 5;
     image(this.img, this.x, this.y, 150, 150);
     // console.log("type??!!!!", this.type);
   }

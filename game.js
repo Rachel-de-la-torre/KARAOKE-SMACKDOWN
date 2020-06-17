@@ -4,11 +4,17 @@ class Game {
       this.obstacles = [];
       this.width = 1500;
       this.height = 800;
+      this.frequency = 100;
     }
   
     preloadGame() {
       targets.preload();
-      this.backgroundImgs = [{ src: loadImage("/assets/background0.png") }];
+      this.backgroundImgs = [
+        { src: loadImage("/assets/background0.png"), x: 0, speed: 0},
+        { src: loadImage("/assets/background1.png"), x: 0, speed: .5},
+        { src: loadImage("/assets/background2.png"), x: 0, speed: 1},
+        
+      ];
       this.obstacleImages = [
         { src: loadImage("/assets/bell.png"), x: 0, height: 100, type: 1 },
         { src: loadImage("/assets/cherry.png"), x: 0, height: 250, type: 2 },
@@ -18,10 +24,17 @@ class Game {
     }
   
     drawingGame() {
+      // console.log("iamdrawing");
+      console.log(this.obstacles)
       clear();
+      // frameRate(30)
       this.background.drawingBackground();
       // collision.drawingCollisionImg();
-      if (frameCount % 180 == 0) {
+      if(frameCount%500==0){
+        this.frequency=Math.floor(this.frequency/1.1)
+      }
+      if (frameCount %this.frequency  == 0) {
+    
         let randomElem = this.obstacleImages[
           Math.floor(Math.random() * this.obstacleImages.length)
         ];
