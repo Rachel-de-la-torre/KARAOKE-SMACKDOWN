@@ -5,6 +5,7 @@ class Obstacles {
     this.x = game.width;
     this.y = randomY;
     this.img = img;
+    // this.counter = 0
   }
 
   setup() {}
@@ -17,12 +18,14 @@ class Obstacles {
 
   collides() {
     if (this.x <= 0) {
+ //******************************************* death head ********************************************************* */
+      // counter ++
+      // console.log(counter);
       return false;
-    } else if (this.x < 300) {
+    } else if (this.x < 150) {
       console.log("x cood in collide", this.x);
-      //*******************************************show collision********************************************************* */
       //game.showCollidedIcon(this.type)
-      console.log("collides function");
+      // console.log("collides function");
       return true;
     }else{
       return false

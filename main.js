@@ -19,28 +19,28 @@ function draw() {
 
 function keyPressed() {
   game.obstacles.forEach((obs) => {
-    if (keyCode === 189 && obs.collides() && obs.type == 1){
+    if (keyCode === 72 && obs.collides() && obs.type == 1){
       // console.log("please work", obs.type);
       points++;
       let saveImg=targets.imgbell
       targets.imgbell = game.collisionImgs[0].src;
       setTimeout(function(){ targets.imgbell=saveImg}, 2000); 
   
-    } else if (keyCode === 80 && obs.collides() && obs.type == 2){
+    } else if (keyCode === 74 && obs.collides() && obs.type == 2){
       // console.log("i do work cherry", obs.type);
       points++;
       let saveImg=targets.imgCherry
       targets.imgCherry = game.collisionImgs[1].src;
       setTimeout(function(){targets.imgCherry=saveImg}, 2000);
       
-    } else if (keyCode === 76 && obs.collides() && obs.type == 3) {
+    } else if (keyCode === 75 && obs.collides() && obs.type == 3) {
       // console.log("i work 7", obs.type);
       points++
       let saveImg=targets.imgSeven
       targets.imgSeven = game.collisionImgs[2].src;
       setTimeout(function(){targets.imgSeven=saveImg}, 2000);
 
-    } else if (keyCode == 188 && obs.collides() && obs.type ==4) {
+    } else if (keyCode == 76 && obs.collides() && obs.type ==4) {
       // console.log("i work watemelon", obs.type);
       points++
       let saveImg=targets.imgWatermelon
