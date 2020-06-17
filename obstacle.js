@@ -5,7 +5,6 @@ class Obstacles {
     this.x = game.width;
     this.y = randomY;
     this.img = img;
-    // this.speed = 0;
   }
 
   setup() {}
@@ -16,16 +15,17 @@ class Obstacles {
     // console.log("type??!!!!", this.type);
   }
 
-  // collides(collideCherry){  ----------------------> = key 80
   collides() {
-    //   first we check if it's off the screen/canvas to the right
     if (this.x <= 0) {
       return false;
-      //   then we check if the target lines up with obstacle's x value
     } else if (this.x < 300) {
       console.log("x cood in collide", this.x);
-      // console.log("collides function");
+      //*******************************************show collision********************************************************* */
+      //game.showCollidedIcon(this.type)
+      console.log("collides function");
       return true;
-    }
+    }else{
+      return false
+    } 
   }
 }
