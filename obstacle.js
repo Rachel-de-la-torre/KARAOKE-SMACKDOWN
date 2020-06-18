@@ -17,12 +17,12 @@ class Obstacles {
   }
 
   collides() {
-    if (this.x <= 0) {
- //******************************************* death head ********************************************************* */
+    if (this.x <= 20) {
+ //************ in the future this is where i would add my ******************** */
       // counter ++
       // console.log(counter);
       return false;
-    } else if (this.x < 150) {
+    } else if (this.x < 200) {
       console.log("x cood in collide", this.x);
       //game.showCollidedIcon(this.type)
       // console.log("collides function");
