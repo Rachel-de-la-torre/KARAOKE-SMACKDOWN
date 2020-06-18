@@ -1,6 +1,5 @@
 let startGame = false;
 let startImg;
-// let gameOver = false
 let song;
 const game = new Game();
 const obstacle = new Obstacles();
@@ -19,8 +18,7 @@ function preload() {
 function setup() {
   createCanvas(game.width, game.height);
   obstacle.setup();
-  // song.play(); ************************* song
-
+  song.play();
 }
 
 function draw() {
@@ -45,10 +43,7 @@ function draw() {
   }
 
 
-  // ***************************************** song
-  // if (gameOver = true){
-    // song.stop
-  // }
+
 }
 
 
@@ -99,17 +94,8 @@ function keyPressed() {
       return false
     } else {return true}
   
-  // ************************************************************************************************* lives
   });
 
 }
 
 
-// function noCollision(){
-//   game.obstacles.forEach((obs) => {
-//     if (!obs.this.x <= 0){
-//       this.lives --;
-//     }
-//   });
-// }
-  // ************************************************************************************************* lives
