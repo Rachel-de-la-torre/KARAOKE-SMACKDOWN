@@ -34,8 +34,10 @@ function draw() {
    }
   });
 
-  text("Score: " + points, 90, 20);
-  text("lives: " + lives, 10, 20);
+  text("Score: " + points, 860, 80);
+  text("lives: " + lives, 660, 80);
+  textSize(50);
+  fill("blue")
 
   if (lives < 0){
     image(endImg, 0,0, width, height);
