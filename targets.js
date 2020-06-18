@@ -5,10 +5,10 @@ class Targets {
     }
 
     preload (){
-        this.imgbell = loadImage("/assets/belltrigger.png");
-        this.imgCherry = loadImage("/assets/cherrytrigger.png");
-        this.imgSeven = loadImage("/assets/seventrigger.png");
-        this.imgWatermelon = loadImage("/assets/watermelontrigger.png");
+        this.imgbell = loadImage("./assets/belltrigger.png");
+        this.imgCherry = loadImage("./assets/cherrytrigger.png");
+        this.imgSeven = loadImage("./assets/seventrigger.png");
+        this.imgWatermelon = loadImage("./assets/watermelontrigger.png");
     }
     
     drawingTargetsImg(){
