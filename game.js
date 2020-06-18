@@ -2,8 +2,8 @@ class Game {
     constructor() {
       this.background = new Background();
       this.obstacles = [];
-      this.width = 1500;
-      this.height = 800;
+      this.width = 1425;
+      this.height = 770;
       this.frequency = 100;
       // this.score = 0;
     }
@@ -11,7 +11,7 @@ class Game {
     preloadGame() {
       targets.preload();
       this.backgroundImgs = [
-        { src: loadImage("/assets/background0.png"), x: 0, speed: 0},
+        { src: loadImage("/assets/background0.jpg"), x: 0, speed: 0},
         { src: loadImage("/assets/background1.png"), x: 0, speed: .5},
         { src: loadImage("/assets/background2.png"), x: 0, speed: 1}
         

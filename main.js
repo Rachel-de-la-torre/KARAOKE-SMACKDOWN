@@ -7,12 +7,12 @@ const obstacle = new Obstacles();
 const targets = new Targets();
 let points = 0
 let lives = 3
-// ************************************************************************************************** lives
 
 
 function preload() {
   game.preloadGame();
   startImg = loadImage("./assets/startScreen.png");
+  endImg = loadImage("./assets/youDied.jpg")
   song = loadSound("./assets/song.mp3");
 }
 
@@ -30,19 +30,19 @@ function draw() {
 } else {
   image(startImg, 0, 0, width, height);
 }
-// ******************* remove obstacles that are off the canvas
-  // game.obstacles=game.obstacles.filter(ob => {
-  //   if (!ob.collides()) {
-  //     return true
-  //   }
-  // })
-  // console.log(game.obstacles);
+  game.obstacles.forEach((obstacle) => {
+    if (obstacle.x === -10) {
+      lives -= 1;
+   }
+  });
 
   text("Score: " + points, 90, 20);
   text("lives: " + lives, 10, 20);
 
-  // ************************************************************************************************* lives
-
+  if (lives < 0){
+    image(endImg, 0,0, width, height);
+    //noLoop () 
+  }
 
 
   // ***************************************** song
@@ -56,11 +56,15 @@ function draw() {
 
 
 function keyPressed() {
-  // if (game==false){
-  //     song.play(); 
-  // }
+ 
   
   startGame = true;
+
+  if (lives < 0){
+    console.log("here");
+    lives = 3;
+}
+
   game.obstacles=game.obstacles.filter((obs) => {
     if (keyCode === 72 && obs.collides() && obs.type == 1){
       // console.log("please work", obs.type);
