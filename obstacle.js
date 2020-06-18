@@ -1,3 +1,4 @@
+
 class Obstacles {
   constructor(randomY, img, type) {
     //   the type will be a random number
@@ -18,7 +19,8 @@ class Obstacles {
 
   collides() {
     if (this.x <= 20) {
- //************ in the future this is where i would add my ******************** */
+      lives--;
+ //************ in the future this is where i would add my death notes ******************** */
       // counter ++
       // console.log(counter);
       return false;

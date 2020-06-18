@@ -5,6 +5,7 @@ class Game {
       this.width = 1500;
       this.height = 800;
       this.frequency = 100;
+      this.score = 0;
     }
   
     preloadGame() {
@@ -28,6 +29,10 @@ class Game {
         { src: loadImage("/assets/sevenCollision.png"), x: 0, height: 400, type: 3},
         { src: loadImage("/assets/watermelonCollision.png"), x: 0, height: 550, type: 4}
       ];
+
+      // this.startscreen = [
+      //   { srch: loadImage("")}
+      // ]
     }
 
 
