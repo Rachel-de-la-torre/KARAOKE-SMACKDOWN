@@ -6,7 +6,7 @@ class Obstacles {
     this.x = game.width;
     this.y = randomY;
     this.img = img;
-    // this.counter = 0
+    this.lives = 3
   }
 
   setup() {}
@@ -17,9 +17,15 @@ class Obstacles {
     // console.log("type??!!!!", this.type);
   }
 
+  offScreen() {
+    if (this.x < 45) {
+      console.log("hello");
+    }
+  }
+
+
   collides() {
     if (this.x <= 20) {
-      lives--;
  //************ in the future this is where i would add my death notes ******************** */
       // counter ++
       // console.log(counter);
@@ -30,6 +36,7 @@ class Obstacles {
       // console.log("collides function");
       return true;
     }else{
+
       return false
     } 
   }

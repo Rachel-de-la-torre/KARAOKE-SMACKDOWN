@@ -5,7 +5,7 @@ class Game {
       this.width = 1500;
       this.height = 800;
       this.frequency = 100;
-      this.score = 0;
+      // this.score = 0;
     }
   
     preloadGame() {
@@ -55,8 +55,11 @@ class Game {
       }
       this.obstacles.forEach((elem) => {
         elem.drawingObstacles();
+        elem.offScreen()
       });
       targets.drawingTargetsImg();
+
+          
     }
   }
 
