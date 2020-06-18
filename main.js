@@ -14,7 +14,9 @@ function setup() {
 
 function draw() {
   game.drawingGame();
-  console.log(points);
+  // console.log(points);
+  game.obstacles=game.obstacles.filter(ob => ob.x > -100)
+  console.log(game.obstacles);
 }
 
 function keyPressed() {
@@ -24,28 +26,28 @@ function keyPressed() {
       points++;
       let saveImg=targets.imgbell
       targets.imgbell = game.collisionImgs[0].src;
-      setTimeout(function(){ targets.imgbell=saveImg}, 2000); 
+      setTimeout(function(){ targets.imgbell=saveImg}, 1000); 
   
     } else if (keyCode === 74 && obs.collides() && obs.type == 2){
       // console.log("i do work cherry", obs.type);
       points++;
       let saveImg=targets.imgCherry
       targets.imgCherry = game.collisionImgs[1].src;
-      setTimeout(function(){targets.imgCherry=saveImg}, 2000);
+      setTimeout(function(){targets.imgCherry=saveImg}, 1000);
       
     } else if (keyCode === 75 && obs.collides() && obs.type == 3) {
       // console.log("i work 7", obs.type);
       points++
       let saveImg=targets.imgSeven
       targets.imgSeven = game.collisionImgs[2].src;
-      setTimeout(function(){targets.imgSeven=saveImg}, 2000);
+      setTimeout(function(){targets.imgSeven=saveImg}, 1000);
 
     } else if (keyCode == 76 && obs.collides() && obs.type ==4) {
       // console.log("i work watemelon", obs.type);
       points++
       let saveImg=targets.imgWatermelon
       targets.imgWatermelon = game.collisionImgs[3].src;
-      setTimeout(function(){targets.imgWatermelon=saveImg}, 2000);
+      setTimeout(function(){targets.imgWatermelon=saveImg}, 1000);
 
     }
   });

@@ -12,7 +12,7 @@ class Obstacles {
 
   drawingObstacles() {
     this.x -= 5;
-    image(this.img, this.x, this.y, 150, 150);
+    image(this.img, this.x, this.y);
     // console.log("type??!!!!", this.type);
   }
 

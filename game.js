@@ -16,10 +16,10 @@ class Game {
         
       ];
       this.obstacleImages = [
-        { src: loadImage("/assets/bell.png"), x: 0, height: 100, type: 1 },
-        { src: loadImage("/assets/cherry.png"), x: 0, height: 250, type: 2 },
-        { src: loadImage("/assets/seven.png"), x: 0, height: 400, type: 3 },
-        { src: loadImage("/assets/watermelon.png"), x: 0, height: 550, type: 4 }
+        { src: loadImage("/assets/bell.svg"), x: 0, height: 100, type: 1 },
+        { src: loadImage("/assets/cherry.svg"), x: 0, height: 250, type: 2 },
+        { src: loadImage("/assets/seven.svg"), x: 0, height: 400, type: 3 },
+        { src: loadImage("/assets/watermelon.svg"), x: 0, height: 550, type: 4 }
       ];
 
       this.collisionImgs = [
