@@ -16,10 +16,11 @@ function preload() {
 }
 
 function setup() {
-  song.play();
+  // music();
   createCanvas(game.width, game.height);
   obstacle.setup();
-  
+  song.play();
+  song.playMode('sustain');  
 }
 
 function draw() {
@@ -54,8 +55,7 @@ function draw() {
 
 
 function keyPressed() {
- 
-  
+
   startGame = true;
 
   if (lives < 0){
@@ -102,3 +102,7 @@ function keyPressed() {
 }
 
 
+// function music(){
+//   song.play();
+//   song.playMode('sustain');
+// }
