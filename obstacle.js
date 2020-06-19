@@ -26,9 +26,6 @@ class Obstacles {
 
   collides() {
     if (this.x <= 20) {
- //************ in the future this is where i would add my death notes ******************** */
-      // counter ++
-      // console.log(counter);
       return false;
     } else if (this.x < 200) {
       console.log("x cood in collide", this.x);
