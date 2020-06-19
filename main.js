@@ -16,11 +16,10 @@ function preload() {
 }
 
 function setup() {
-  // music();
+  song.play();
+  song.playMode('sustain'); 
   createCanvas(game.width, game.height);
   obstacle.setup();
-  song.play();
-  song.playMode('sustain');  
 }
 
 function draw() {

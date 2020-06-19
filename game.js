@@ -11,7 +11,7 @@ class Game {
       targets.preload();
       this.backgroundImgs = [
         { src: loadImage("./assets/background0.svg"), x: 0, speed: 0},
-git         { src: loadImage("./assets/background1.svg"), x: 0, speed: .5},
+        { src: loadImage("./assets/background1.svg"), x: 0, speed: .5},
         { src: loadImage("./assets/background2.png"), x: 0, speed: 1}
         
       ];
