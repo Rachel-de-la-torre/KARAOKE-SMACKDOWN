@@ -5,14 +5,13 @@ class Game {
       this.width = 1425;
       this.height = 770;
       this.frequency = 100;
-      // this.score = 0;
     }
   
     preloadGame() {
       targets.preload();
       this.backgroundImgs = [
         { src: loadImage("./assets/background0.svg"), x: 0, speed: 0},
-        { src: loadImage("./assets/background1.png"), x: 0, speed: .5},
+        { src: loadImage("./assets/background1.svg"), x: 0, speed: .5},
         { src: loadImage("./assets/background2.png"), x: 0, speed: 1}
         
       ];
@@ -30,15 +29,11 @@ class Game {
         { src: loadImage("./assets/watermelonCollision.png"), x: 0, height: 550, type: 4}
       ];
 
-      // this.startscreen = [
-      //   { srch: loadImage("")}
-      // ]
+
     }
 
 
     drawingGame() {
-      // console.log("iamdrawing");
-      // console.log(this.obstacles)
       clear();
       this.background.drawingBackground();
       

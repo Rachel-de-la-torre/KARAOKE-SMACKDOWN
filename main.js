@@ -16,9 +16,10 @@ function preload() {
 }
 
 function setup() {
+  song.play();
   createCanvas(game.width, game.height);
   obstacle.setup();
-  song.play();
+  
 }
 
 function draw() {
