@@ -8,30 +8,31 @@ let points = 0
 let lives = 3
 
 
+
+
 function preload() {
   game.preloadGame();
   startImg = loadImage("./assets/startScreen.png");
   endImg = loadImage("./assets/youDied.jpg");
   song = loadSound("./assets/song.mp3",loaded);
-  
 }
+
+
 
 function setup() {
-  
-  //song.play();
-  //song.playMode('sustain'); 
   createCanvas(game.width, game.height);
   obstacle.setup();
-  // song.play();
-  // song.playMode('sustain'); 
-}
-function loaded(){
-  song.play()
-  //song.playMode('sustain'); 
 }
 
+
+
+function loaded(){
+  song.play()
+}
+
+
+
 function draw() {
- 
   if (startGame == true){
   game.drawingGame();
 } else {
@@ -52,9 +53,6 @@ function draw() {
     image(endImg, 0,0, width, height);
     //noLoop () 
   }
-
-
-
 }
 
 
@@ -111,7 +109,3 @@ if(keyCode===32){
 }
 
 
-// function music(){
-//   song.play();
-//   song.playMode('sustain');
-// }

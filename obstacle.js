@@ -11,11 +11,13 @@ class Obstacles {
 
   setup() {}
 
+
   drawingObstacles() {
     this.x -= 5;
     image(this.img, this.x, this.y);
     // console.log("type??!!!!", this.type);
   }
+
 
   offScreen() {
     if (this.x < 45) {
@@ -32,8 +34,7 @@ class Obstacles {
       //game.showCollidedIcon(this.type)
       // console.log("collides function");
       return true;
-    }else{
-
+    }else {
       return false
     } 
   }
