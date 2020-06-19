@@ -11,19 +11,27 @@ let lives = 3
 function preload() {
   game.preloadGame();
   startImg = loadImage("./assets/startScreen.png");
-  endImg = loadImage("./assets/youDied.jpg")
-  song = loadSound("./assets/song.mp3");
+  endImg = loadImage("./assets/youDied.jpg");
+  song = loadSound("./assets/song.mp3",loaded);
+  
 }
 
 function setup() {
-  song.play();
-  song.playMode('sustain'); 
+  
+  //song.play();
+  //song.playMode('sustain'); 
   createCanvas(game.width, game.height);
   obstacle.setup();
+  // song.play();
+  // song.playMode('sustain'); 
+}
+function loaded(){
+  song.play()
+  //song.playMode('sustain'); 
 }
 
 function draw() {
-
+ 
   if (startGame == true){
   game.drawingGame();
 } else {
@@ -56,7 +64,9 @@ function draw() {
 function keyPressed() {
 
   startGame = true;
-
+if(keyCode===32){
+  song.play()
+}
   if (lives < 0){
     console.log("here");
     lives = 3;
